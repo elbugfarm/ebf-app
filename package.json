@@ -1,6 +1,6 @@
 {
   "name": "ebf-app",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "El Bug Farm Nuxt application",
   "author": "Michel Denegri",
   "private": true,
