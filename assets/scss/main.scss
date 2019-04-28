@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald');
+@import '~bulma/sass/utilities/_all';
+
+$family-sans-serif: 'Open Sans Condensed', sans-serif;
+$family-primary: $family-sans-serif;
+$family-secondary: 'Oswald', sans-serif;
+$body-background-color: #000;
+$purple: #421b41;
+$red:   #ff3860;
+$primary: $red;
+
+@import '~bulma';
+
+body {
+  background: linear-gradient(155deg, rgb(0, 0, 0) 50%, rgb(26, 26, 26));
+}
