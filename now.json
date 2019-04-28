@@ -1,20 +1,33 @@
 {
   "version": 2,
   "name": "ebf-app",
-  "alias": "elbugfarm.com",
+  "alias": ["www.elbugfarm.com"],
   "builds": [
     {
       "src": "nuxt.config.js",
       "use": "@nuxtjs/now-builder",
       "config": {
-        "serverFiles": [
-          "server-middleware/**"
-        ]
+        "serverFiles": ["server-middleware/**"]
       }
     }
   ],
   "routes": [
-    { "src": "/_nuxt/.+", "headers": { "cache-control": "s-maxage=31536000" } },
-    { "src": "/(.*)", "dest": "/" }
+    {
+      "src": "/(.*)",
+      "status": 301,
+      "headers": {
+        "Location": "https://elbugfarm.com/$1"
+      }
+    },
+    {
+      "src": "/_nuxt/.+",
+      "headers": {
+        "cache-control": "s-maxage=31536000"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
   ]
 }
